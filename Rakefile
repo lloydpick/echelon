@@ -12,8 +12,8 @@ Hoe.plugin :newgem
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 $hoe = Hoe.spec 'echelon' do
   self.developer 'Lloyd Pick', 'lloydpick@gmail.com'
-  self.rubyforge_name       = self.name # TODO this is default value
-  # self.extra_deps         = [['activesupport','>= 2.0.2']]
+  self.rubyforge_name       = self.name
+  self.extra_deps         = [['json_pure','>= 1.4.6']]
 end
 
 require 'newgem/tasks'
