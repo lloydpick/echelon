@@ -1,18 +1,22 @@
 = echelon
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/lloydpick/echelon
 
 == DESCRIPTION:
 
-FIX (describe your package)
+RubyGem to give quick access to Theme Park queue times
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+Currently only the following parks are supported...
+
+* Thorpe Park
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require 'echelon'
+  tp = Echelon::ThorpePark.new()
+  tp.find_by_name("SAW - The Ride")
 
 == REQUIREMENTS:
 
@@ -20,7 +24,7 @@ FIX (describe your package)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+  gem install echelon
 
 == LICENSE:
 

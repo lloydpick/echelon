@@ -3,5 +3,7 @@ Manifest.txt
 README.rdoc
 Rakefile
 lib/echelon.rb
+lib/echelon/ride.rb
+lib/echelon/thorpe_park.rb
 test/test_echelon.rb
 test/test_helper.rb
