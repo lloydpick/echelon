@@ -1,3 +1,7 @@
+=== 0.0.2 2010-11-27
+
+* Added Disneyland Paris
+
 === 0.0.1 2010-10-20
 
 * Initial release
