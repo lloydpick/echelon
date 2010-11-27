@@ -11,6 +11,7 @@ RubyGem to give quick access to Theme Park queue times
 Currently only the following parks are supported...
 
 * Thorpe Park
+* Disneyland Paris
 
 == SYNOPSIS:
 
