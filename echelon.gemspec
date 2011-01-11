@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", ">= 2.4.0"
 
   s.add_dependency "json_pure", "1.4.6"
+  s.add_dependency "zip", "2.0.2"
 
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
