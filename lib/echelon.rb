@@ -6,5 +6,4 @@ require "#{File.dirname(__FILE__)}/echelon/thorpe_park.rb"
 require "#{File.dirname(__FILE__)}/echelon/disneyland_paris.rb"
 
 module Echelon
-  VERSION = '0.0.2'
 end
