@@ -94,7 +94,7 @@ module Echelon
     def create_ride_object(ref)
       self.json_data.each do |ride|
         if ride[0] == ref
-          return Ride.new(:name => self.ride_list[ref], :queue_time => ride[4].to_i, :active => ride[3].to_i)
+          return Ride.new(:name => self.ride_list[ref], :queue_time => ride[4].to_i, :active => ride[3].to_i, :updated_at => DateTime.now)
         end
       end
     end
