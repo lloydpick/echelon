@@ -4,7 +4,8 @@ require 'echelon/park'
 describe Echelon::Ride do
 
   before do
-    @ride = Echelon::Ride.new(:name => 'Ride', :queue_time => 10, :active => 1)
+    @datetime = DateTime.now
+    @ride = Echelon::Ride.new(:name => 'Ride', :queue_time => 10, :active => 1, :updated_at => @datetime)
   end
 
   it "should return the name of the ride" do
@@ -17,6 +18,10 @@ describe Echelon::Ride do
 
   it "should return the ride status" do
     @ride.active.should eql(1)
+  end
+
+  it "should return the ride updated at datetime" do
+    @ride.updated_at.should eql(@datetime)
   end
 
 end
