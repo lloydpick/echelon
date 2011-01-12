@@ -1,3 +1,13 @@
+=== 0.0.4 2011-01-12
+
+* Added Seaworld San Antonio
+* Added Alton Towers (not enabled, remote server not operational yet)
+
+=== 0.0.3 2011-01-10
+
+* Added rSpec tests
+* Refactored how parks work
+
 === 0.0.2 2010-11-27
 
 * Added Disneyland Paris
