@@ -25,10 +25,10 @@ describe Echelon::ThorpePark do
   end
 
   it "should return ride object values correctly" do
-    stealth = @park.find_by_id(3)
-    stealth.name.should eql("Stealth")
-    stealth.queue_time.should satisfy { |v| v >= 0 && v < 1000 }
-    stealth.active.should satisfy { |v| v == 0 || v == 1 }
+    ride = @park.find_by_id(3)
+    ride.name.should eql("Stealth")
+    ride.queue_time.should satisfy { |v| v >= 0 && v < 1000 }
+    ride.active.should satisfy { |v| v == 0 || v == 1 }
   end
 
 end

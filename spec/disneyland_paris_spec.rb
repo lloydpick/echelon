@@ -25,10 +25,10 @@ describe Echelon::DisneylandParis do
   end
 
   it "should return ride object values correctly" do
-    stealth = @park.find_by_id("P1AA04")
-    stealth.name.should eql("Pirates of the Caribbean")
-    stealth.queue_time.should satisfy { |v| v >= 0 && v < 500 }
-    stealth.active.should satisfy { |v| v >= -1 && v < 3 }
+    ride = @park.find_by_id("P1AA04")
+    ride.name.should eql("Pirates of the Caribbean")
+    ride.queue_time.should satisfy { |v| v >= 0 && v < 500 }
+    ride.active.should satisfy { |v| v >= -1 && v < 3 }
   end
 
 end
