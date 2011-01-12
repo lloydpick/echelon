@@ -31,4 +31,15 @@ describe Echelon::SeaworldSanAntonio do
     ride.active.should satisfy { |v| v == 0 || v == 1 }
   end
 
+  describe "parse_wait_time" do
+
+    it "should return a wait time and active state correctly" do
+      @park.send(:parse_wait_time, "15 mins").should eql([1, 15])
+      @park.send(:parse_wait_time, "Closed").should eql([0, 0])
+      @park.send(:parse_wait_time, "No Wait").should eql([1, 0])
+      @park.send(:parse_wait_time, "30 mins").should eql([1, 30])
+      @park.send(:parse_wait_time, "Invalid").should eql([0, 0])
+    end
+  end
+
 end
