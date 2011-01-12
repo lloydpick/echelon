@@ -12,16 +12,23 @@ Currently only the following parks are supported...
 
 * Thorpe Park
 * Disneyland Paris
+* Seaworld San Antonio
 
 == SYNOPSIS:
 
   require 'echelon'
-  tp = Echelon::ThorpePark.new()
-  tp.find_by_name("SAW - The Ride")
+  seaworld = Echelon::SeaworldSanAntonio.new()
+  seaworld.find_by_name("Steel Eel")
+  => #<Echelon::Ride:0xb7179ca8 @updated_at=#<DateTime>, @name="Steel Eel", @active=1, @queue_time=30>
+  seaworld.rides
+  => [#<Echelon::Ride:0xb7176454 @updated_at=#<DateTime>, @name="Steel Eel", @active=1, @queue_time=30>,
+  #<Echelon::Ride:0xb7174690 @updated_at=#<DateTime>, @name="Texas Splashdown", @active=0, @queue_time=0>,
+  #<Echelon::Ride:0xb7172854 @updated_at=#<DateTime>, @name="Great White", @active=1, @queue_time=15>,
+  #<Echelon::Ride:0xb7170a40 @updated_at=#<DateTime>, @name="Rio Loco", @active=0, @queue_time=0>,
+  #<Echelon::Ride:0xb716ebc8 @updated_at=#<DateTime>, @name="Journey to Atlantis", @active=1, @queue_time=0>,
+  #<Echelon::Ride:0xb716cd8c @updated_at=#<DateTime>, @name="Lost Lagoon", @active=0, @queue_time=0>,
+  #<Echelon::Ride:0xb716afc8 @updated_at=#<DateTime>, @name="Shamu Express", @active=1, @queue_time=15>]
 
-== REQUIREMENTS:
-
-* FIX (list of requirements)
 
 == INSTALL:
 
