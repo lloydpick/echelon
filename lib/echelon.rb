@@ -6,6 +6,7 @@ require "#{File.dirname(__FILE__)}/echelon/park.rb"
 
 require "#{File.dirname(__FILE__)}/echelon/parks/thorpe_park.rb"
 require "#{File.dirname(__FILE__)}/echelon/parks/disneyland_paris.rb"
+require "#{File.dirname(__FILE__)}/echelon/parks/seaworld_san_antonio.rb"
 
 module Echelon
 end
