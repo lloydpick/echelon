@@ -33,7 +33,8 @@ module Echelon
         23 => 'Rocky Express',
         24 => 'Wet Wet Wet',
         25 => 'Neptune\'s Beach',
-        26 => 'Chief Ranger\'s Carousel'
+        26 => 'Chief Ranger\'s Carousel',
+        27 => 'Storm Surge'
       }
     end
 
