@@ -13,6 +13,8 @@ Currently only the following parks are supported...
 * Thorpe Park
 * Disneyland Paris
 * Seaworld San Antonio
+* Seaworld San Diego
+* Seaworld Orlando
 
 == SYNOPSIS:
 
