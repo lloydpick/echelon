@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["lloydpick@gmail.com"]
   s.homepage    = "http://github.com/lloydpick/echelon"
   s.summary     = "RubyGem to give quick access to Theme Park queue times"
-  s.description = "RubyGem to give quick access to Theme Park queue times (Alton Towers, Disneyland Paris, Seaworld San Antonio, Seaworld San Diego, Seaworld Orlando, Thorpe Park)"
+  s.description = "RubyGem to give quick access to Theme Park queue times (Alton Towers, Disney World Animal Kingdom, Disney World Epcot, Disney World Hollywood Studios, Disney World Magic Kingdom, Disneyland, Disneyland California Adventure, Disneyland Paris, Seaworld San Antonio, Seaworld San Diego, Seaworld Orlando, Thorpe Park)"
 
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project         = "echelon"
