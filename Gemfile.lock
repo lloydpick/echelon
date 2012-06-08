@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    echelon (0.0.3)
+    echelon (0.0.4)
       json_pure (= 1.4.6)
       xml-simple (= 1.0.12)
       zip (= 2.0.2)
@@ -28,7 +28,4 @@ PLATFORMS
 DEPENDENCIES
   bundler (>= 1.0.0)
   echelon!
-  json_pure (= 1.4.6)
   rspec (>= 2.4.0)
-  xml-simple (= 1.0.12)
-  zip (= 2.0.2)

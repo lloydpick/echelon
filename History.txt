@@ -1,3 +1,9 @@
+=== 0.0.6 2012-04-19
+
+* Added park Alton Towers
+* Added 'The Swarm' ride to Thorpe Park
+* Fixed Disneyland Paris encoding issue
+
 === 0.0.4 2011-01-12
 
 * Added Seaworld San Antonio
