@@ -10,8 +10,15 @@ module Echelon
     def ride_list
       {
         1 => 'Air',
-        2 => 'Enterprise',
-        3 => 'Rita'
+        2 => 'Nemesis',
+        3 => 'TH13TEEN',
+        6 => 'Oblivion',
+        8 => 'Rita',
+        10 => 'Congo River Rapids',
+        11 => 'Sonic Spinball',
+        14 => 'Runaway Mine Train',
+        15 => 'The Flume',
+        31 => 'Nemesis Sub-Terra'
       }
     end
 
