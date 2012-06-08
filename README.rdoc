@@ -10,17 +10,32 @@ RubyGem to give quick access to Theme Park queue times
 
 Currently only the following parks are supported...
 
-* Alton Towers (UK)
-* Disneyland Paris (France)
-* Seaworld San Antonio (USA)
-* Seaworld San Diego (USA)
-* Seaworld Orlando (USA)
-* Thorpe Park (UK)
+=== France
+
+* Disneyland Paris
+
+=== United Kingdom
+
+* Alton Towers
+* Thorpe Park
+
+=== United States of America
+
+* Disney World Animal Kingdom
+* Disney World Epcot
+* Disney World Hollywood Studios
+* Disney World Magic Kingdom
+* Disneyland
+* Disneyland California Adventure
+* Seaworld Orlando
+* Seaworld San Antonio
+* Seaworld San Diego
+
 
 == SYNOPSIS:
 
   require 'echelon'
-  seaworld = Echelon::SeaworldSanAntonio.new()
+  seaworld = Echelon::Seaworld::SanAntonio.new()
   seaworld.find_by_name("Steel Eel")
   => #<Echelon::Ride:0xb7179ca8 @updated_at=#<DateTime>, @name="Steel Eel", @active=1, @queue_time=30>
   seaworld.rides
@@ -32,6 +47,29 @@ Currently only the following parks are supported...
   #<Echelon::Ride:0xb716cd8c @updated_at=#<DateTime>, @name="Lost Lagoon", @active=0, @queue_time=0>,
   #<Echelon::Ride:0xb716afc8 @updated_at=#<DateTime>, @name="Shamu Express", @active=1, @queue_time=15>]
 
+== PARK LISTS
+
+  # Seaworld
+  Echelon::Seaworld::SanAntonio.new()
+  Echelon::Seaworld::Orlando.new()
+  Echelon::Seaworld::SanDiego.new()
+  
+  # Disney World
+  Echelon::DisneyWorld::AnimalKingdom.new()
+  Echelon::DisneyWorld::Epcot.new()
+  Echelon::DisneyWorld::HollywoodStudios.new()
+  Echelon::DisneyWorld::MagicKingdom.new()
+
+  # Disneyland California
+  Echelon::Disneyland::Disneyland.new()
+  Echelon::Disneyland::CaliforniaAdventure.new()
+  
+  # Disneyland Paris
+  Echelon::DisneylandParis.new()
+
+  # UK Parks
+  Echelon::AltonTowers.new()
+  Echelon::ThorpePark.new()
 
 == INSTALL:
 
@@ -41,7 +79,7 @@ Currently only the following parks are supported...
 
 (The MIT License)
 
-Copyright (c) 2010 Lloyd Pick
+Copyright (c) 2010-2012 Lloyd Pick
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
