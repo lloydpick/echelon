@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    echelon (0.0.4)
+    echelon (1.0.0)
       json_pure (= 1.4.6)
       xml-simple (= 1.0.12)
       zip (= 2.0.2)
