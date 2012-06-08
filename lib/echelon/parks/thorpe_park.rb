@@ -34,7 +34,8 @@ module Echelon
         24 => 'Wet Wet Wet',
         25 => 'Neptune\'s Beach',
         26 => 'Chief Ranger\'s Carousel',
-        27 => 'Storm Surge'
+        27 => 'Storm Surge',
+        28 => 'The Swarm'
       }
     end
 
