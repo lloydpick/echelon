@@ -11,7 +11,7 @@ module Echelon
 
     def find_by_name(ride)
       raise ArgumentError, "Unknown ride name" unless ride_list.has_value?(ride)
-      ref = ride_list.index(ride)
+      ref = ride_list.respond_to?(:key) ? ride_list.key(ride) : ride_list.index(ride)
       create_ride_object(ref)
     end
 
