@@ -2,6 +2,8 @@
 
 * http://github.com/lloydpick/echelon
 
+{<img src="https://secure.travis-ci.org/lloydpick/echelon.png?branch=master" alt="Build Status" />}[http://travis-ci.org/lloydpick/echelon]
+
 == DESCRIPTION:
 
 RubyGem to give quick access to Theme Park queue times
