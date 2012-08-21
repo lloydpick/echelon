@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'xmlsimple'
+require 'nokogiri'
 require 'net/http'
 require 'date'
 
@@ -30,17 +30,17 @@ module Echelon
         resp, data = http.get('/san_diego/rides')
 
         # were only interested in the ride data, throw everything else away
-        xml_data = XmlSimple.xml_in(data)
-        @xml_data = xml_data['ride']
+        xml_data = Nokogiri::HTML(data)
+        @xml_data = xml_data.xpath("//ride")
       end
 
       private
 
       def create_ride_object(ref)
         self.xml_data.each do |ride|
-          if ride["id"].to_s.to_i == ref
-            active, queue_time = parse_wait_time(ride["waitTime"].to_s)
-            updated_at = DateTime.parse(ride["lastModified"].to_s)
+          if ride.xpath('id').inner_text.to_i == ref
+            active, queue_time = parse_wait_time(ride.xpath('waittime').inner_text)
+            updated_at = DateTime.parse(ride.xpath('lastmodified').inner_text)
             return Ride.new(:name => self.ride_list[ref], :queue_time => queue_time, :active => active, :updated_at => updated_at)
           end
         end
