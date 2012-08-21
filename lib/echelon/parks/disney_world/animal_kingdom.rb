@@ -16,7 +16,7 @@ module Echelon
         # fetch the json feed
         url = "http://dparks.uiemedia.net/dmm_v2/jsondata/JsonUpdateData?version=14&p=80007823"
         resp = Net::HTTP.get_response(URI.parse(url))
-        data = resp.body[2..-1]
+        data = resp.body
 
         # were only interested in the ride data, throw everything else away
         json_data = JSON.parse(data)
