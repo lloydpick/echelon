@@ -11,13 +11,14 @@ module Echelon
 
       def ride_list
         {
-          2002 => 'Wild Arctic Ride',
           2048 => 'Flying Fiddler',
           2049 => 'Swishy Fishies',
           2034 => 'Kraken',
           2018 => 'Sky Tower',
           2036 => 'Journey to Atlantis',
           2037 => 'Manta',
+          2220 => 'Wild Arctic Ride',
+          2343 => 'Turtle Trek',
           2008 => 'Sea Carousel',
           2044 => 'Shamu Express',
           2045 => 'Ocean Commotion',

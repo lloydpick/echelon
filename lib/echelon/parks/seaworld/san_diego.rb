@@ -12,6 +12,7 @@ module Echelon
       def ride_list
         {
           1034 => 'Shipwreck Rapids',
+          1239 => 'Manta',
           1024 => 'Skytower',
           1010 => 'Journey to Atlantis',
           1011 => 'Wild Arctic Ride',
