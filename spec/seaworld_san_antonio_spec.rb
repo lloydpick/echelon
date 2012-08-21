@@ -1,18 +1,18 @@
 require 'echelon/park'
-require 'echelon/parks/seaworld_san_antonio'
+require 'echelon/parks/seaworld/san_antonio'
 
 # Mosts of the test here are pretty generic, although you can test for specific
 # cases, such as the active states may differ between parks, and queue times may
 # not exceed a certain value etc etc.
 
-describe Echelon::SeaworldSanAntonio do
+describe Echelon::Seaworld::SanAntonio do
 
   before do
-    @park = Echelon::SeaworldSanAntonio.new()
+    @park = Echelon::Seaworld::SanAntonio.new()
   end
 
   it "should inherit from Park" do
-    @park.should be_kind_of(Echelon::SeaworldSanAntonio)
+    @park.should be_kind_of(Echelon::Seaworld::SanAntonio)
   end
 
   it "should have some rides" do

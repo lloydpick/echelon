@@ -26,7 +26,7 @@ describe Echelon::AltonTowers do
 
   it "should return ride object values correctly" do
     ride = @park.find_by_id(3)
-    ride.name.should eql("Rita")
+    ride.name.should eql("TH13TEEN")
     ride.queue_time.should satisfy { |v| v >= 0 && v < 1000 }
     ride.active.should satisfy { |v| v == 0 || v == 1 }
   end
