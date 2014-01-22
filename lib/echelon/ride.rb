@@ -1,6 +1,6 @@
 module Echelon
   class Ride
-    attr_reader :name, :queue_time, :active, :updated_at
+    attr_reader :name, :queue_time, :active, :updated_at, :meta
 
     def initialize(*params)
       params.each do |key|
