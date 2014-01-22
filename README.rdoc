@@ -57,10 +57,11 @@ Currently only the following parks are supported...
   Echelon::Seaworld::SanDiego.new()
   
   # Disney World
-  Echelon::DisneyWorld::AnimalKingdom.new()
-  Echelon::DisneyWorld::Epcot.new()
-  Echelon::DisneyWorld::HollywoodStudios.new()
-  Echelon::DisneyWorld::MagicKingdom.new()
+  wdw = Echelon::DisneyWorld.new()
+  wdw.animal_kingdom
+  wdw.epcot
+  wdw.hollywood_studios
+  wdw.magic_kingdom
 
   # Disneyland California
   Echelon::Disneyland::Disneyland.new()
@@ -81,7 +82,7 @@ Currently only the following parks are supported...
 
 (The MIT License)
 
-Copyright (c) 2010-2012 Lloyd Pick
+Copyright (c) 2010-2014 Lloyd Pick
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
