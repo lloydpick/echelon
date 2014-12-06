@@ -26,7 +26,7 @@ module Echelon
         http = Net::HTTP.new('lab.defimobile.com', 443)
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-        resp, data = http.get('/seaworld/rides')
+        _resp, data = http.get('/seaworld/rides')
 
         # were only interested in the ride data, throw everything else away
         xml_data = Nokogiri::HTML(data)
@@ -36,20 +36,20 @@ module Echelon
       private
 
       def create_ride_object(ref)
-        self.xml_data.each do |ride|
+        xml_data.each do |ride|
           if ride.xpath('id').inner_text.to_i == ref
             active, queue_time = parse_wait_time(ride.xpath('waittime').inner_text)
             updated_at = DateTime.parse(ride.xpath('lastmodified').inner_text)
-            return Ride.new(:name => self.ride_list[ref], :queue_time => queue_time, :active => active, :updated_at => updated_at)
+            return Ride.new(name: ride_list[ref], queue_time: queue_time, active: active, updated_at: updated_at)
           end
         end
       end
 
       def parse_wait_time(wait)
-        if wait == "Closed"
+        if wait == 'Closed'
           queue_time = 0
           active = 0
-        elsif wait == "No Wait"
+        elsif wait == 'No Wait'
           queue_time = 0
           active = 1
         elsif wait =~ /(\d*) min/
@@ -59,6 +59,7 @@ module Echelon
           queue_time = 0
           active = 0
         end
+
         return active, queue_time
       end
     end

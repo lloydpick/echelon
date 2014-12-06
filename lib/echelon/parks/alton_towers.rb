@@ -24,24 +24,23 @@ module Echelon
 
     def initialize
       # fetch the json feed from the merlin site
-      url = "http://www.merlincms.com/2.php"
+      url = 'http://www.merlincms.com/2.php'
       resp = Net::HTTP.get_response(URI.parse(url))
       data = resp.body
 
       # were only interested in the ride data, throw everything else away
       json_data = JSON.parse(data)
-      @json_data = json_data["Rides"]
+      @json_data = json_data['Rides']
     end
 
     private
 
     def create_ride_object(ref)
-      self.json_data.each do |ride|
-        if ride["ref"].to_i == ref
-          return Ride.new(:name => self.ride_list[ref], :queue_time => ride["queue"].to_i, :active => ride["active"].to_i)
+      json_data.each do |ride|
+        if ride['ref'].to_i == ref
+          return Ride.new(name: ride_list[ref], queue_time: ride['queue'].to_i, active: ride['active'].to_i)
         end
       end
     end
-
   end
 end

@@ -63,17 +63,17 @@ module Echelon
         'User-Agent' => 'Disneyland 1.0 (iPhone; iPhone OS 4.1; en_GB)',
         'Content-Type' => 'application/x-www-form-urlencoded;charset=UTF-8'
       }
-      resp, data = http.post('/cms/ProxyTempsAttente', data, headers)
+      resp, _data = http.post('/cms/ProxyTempsAttente', data, headers)
 
       tmp = Tempfile.new('disneyland_paris_zip')
       tmp << resp.body
       tmp.close
 
       json_data = nil
-      Zip::ZipFile.open(tmp.path) { |zipfile|
-        json_data = JSON.parse(zipfile.read("temps_attente.json"))
-        json_data = json_data["l"]
-      }
+      Zip::ZipFile.open(tmp.path) do |zipfile|
+        json_data = JSON.parse(zipfile.read('temps_attente.json'))
+        json_data = json_data['l']
+      end
 
       i = 0
       rides = []
@@ -94,12 +94,11 @@ module Echelon
     private
 
     def create_ride_object(ref)
-      self.json_data.each do |ride|
+      json_data.each do |ride|
         if ride[0] == ref
-          return Ride.new(:name => self.ride_list[ref], :queue_time => ride[4].to_i, :active => ride[3].to_i, :updated_at => DateTime.now)
+          return Ride.new(name: ride_list[ref], queue_time: ride[4].to_i, active: ride[3].to_i, updated_at: DateTime.now)
         end
       end
     end
-
   end
 end

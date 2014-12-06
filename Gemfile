@@ -4,6 +4,5 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  # for travis-ci.org
-  gem "rake"
+  gem 'rake'
 end

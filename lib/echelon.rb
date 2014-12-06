@@ -28,9 +28,7 @@ require "#{File.dirname(__FILE__)}/echelon/parks/disneyland/california_adventure
 require "#{File.dirname(__FILE__)}/echelon/parks/disneyland_paris.rb"
 
 module Echelon
-  
   def self.parameterize(params)
-    URI.escape(params.collect{|k,v| "#{k}=#{v}"}.join('&'))
+    URI.escape(params.collect { |k, v| "#{k}=#{v}" }.join('&'))
   end
-  
 end
