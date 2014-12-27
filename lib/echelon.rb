@@ -15,10 +15,6 @@ require "#{File.dirname(__FILE__)}/echelon/parks/seaworld/orlando.rb"
 
 # Disney World Resort
 require "#{File.dirname(__FILE__)}/echelon/parks/disney_world.rb"
-# require "#{File.dirname(__FILE__)}/echelon/parks/disney_world/magic_kingdom.rb"
-# require "#{File.dirname(__FILE__)}/echelon/parks/disney_world/epcot.rb"
-# require "#{File.dirname(__FILE__)}/echelon/parks/disney_world/hollywood_studios.rb"
-# require "#{File.dirname(__FILE__)}/echelon/parks/disney_world/animal_kingdom.rb"
 
 # Disneyland Resort California
 require "#{File.dirname(__FILE__)}/echelon/parks/disneyland/disneyland.rb"
