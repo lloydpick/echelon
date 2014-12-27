@@ -37,7 +37,7 @@ Currently only the following parks are supported...
 == SYNOPSIS:
 
   require 'echelon'
-  seaworld = Echelon::Seaworld::SanAntonio.new()
+  seaworld = Echelon::Seaworld::SanAntonio.new
   seaworld.find_by_name("Steel Eel")
   => #<Echelon::Ride:0xb7179ca8 @updated_at=#<DateTime>, @name="Steel Eel", @active=1, @queue_time=30>
   seaworld.rides
@@ -52,27 +52,27 @@ Currently only the following parks are supported...
 == PARK LISTS
 
   # Seaworld
-  Echelon::Seaworld::SanAntonio.new()
-  Echelon::Seaworld::Orlando.new()
-  Echelon::Seaworld::SanDiego.new()
-  
+  Echelon::Seaworld::SanAntonio.new
+  Echelon::Seaworld::Orlando.new
+  Echelon::Seaworld::SanDiego.new
+
   # Disney World
-  wdw = Echelon::DisneyWorld.new()
+  wdw = Echelon::DisneyWorld.new
   wdw.animal_kingdom
   wdw.epcot
   wdw.hollywood_studios
   wdw.magic_kingdom
 
   # Disneyland California
-  Echelon::Disneyland::Disneyland.new()
-  Echelon::Disneyland::CaliforniaAdventure.new()
-  
+  Echelon::Disneyland::Disneyland.new
+  Echelon::Disneyland::CaliforniaAdventure.new
+
   # Disneyland Paris
-  Echelon::DisneylandParis.new()
+  Echelon::DisneylandParis.new
 
   # UK Parks
-  Echelon::AltonTowers.new()
-  Echelon::ThorpePark.new()
+  Echelon::AltonTowers.new
+  Echelon::ThorpePark.new
 
 == INSTALL:
 
@@ -82,7 +82,7 @@ Currently only the following parks are supported...
 
 (The MIT License)
 
-Copyright (c) 2010-2014 Lloyd Pick
+Copyright (c) 2010-2015 Lloyd Pick
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
