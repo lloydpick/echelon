@@ -32,6 +32,8 @@ Currently only the following parks are supported...
 * Seaworld Orlando
 * Seaworld San Antonio
 * Seaworld San Diego
+* Universal Studios Orlando
+* Universal Studios Islands of Adventure
 
 
 == SYNOPSIS:
@@ -73,6 +75,11 @@ Currently only the following parks are supported...
   # UK Parks
   Echelon::AltonTowers.new
   Echelon::ThorpePark.new
+
+  # Universal Studios Orlando Resort
+  uo = Echelon::UniversalStudiosOrlando.new
+  uo.islands_of_adventure.rides
+  uo.universal_studios.rides
 
 == INSTALL:
 

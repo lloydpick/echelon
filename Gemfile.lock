@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    echelon (1.0.3)
+    echelon (1.0.4)
       json_pure (= 1.8.1)
       nokogiri (~> 1.5)
       zip (= 2.0.2)

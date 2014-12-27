@@ -23,6 +23,9 @@ require "#{File.dirname(__FILE__)}/echelon/parks/disneyland/california_adventure
 # Disneyland Resort Paris
 require "#{File.dirname(__FILE__)}/echelon/parks/disneyland_paris.rb"
 
+# Universal Studios Orlando Resort
+require "#{File.dirname(__FILE__)}/echelon/parks/universal_studios_orlando.rb"
+
 module Echelon
   def self.parameterize(params)
     URI.escape(params.collect { |k, v| "#{k}=#{v}" }.join('&'))
