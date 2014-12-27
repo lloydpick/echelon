@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bundler', '>= 1.0.0'
   s.add_development_dependency 'rspec',   '>= 2.4.0'
 
-  s.add_dependency 'json_pure', '1.4.6'
+  s.add_dependency 'json_pure', '1.8.1'
   s.add_dependency 'zip',       '2.0.2'
   s.add_dependency 'nokogiri',  '~> 1.5'
 
