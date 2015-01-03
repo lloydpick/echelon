@@ -30,7 +30,7 @@ module Echelon
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-      date = DateTime.now.strftime("%a, %d %b %Y %H:%M:%S #{Time.now.strftime('%Z')}")
+      date = DateTime.now.strftime("%a, %d %b %Y %H:%M:%S GMT")
       digest = OpenSSL::HMAC.digest('sha256', SECRET, "#{KEY}\n#{date}\n")
       signature = Base64.encode64(digest).strip.gsub(/\=$/, "\u003d")
       params = { apikey: 'AndroidMobileApp', signature: signature }.to_json
