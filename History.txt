@@ -1,3 +1,16 @@
+=== 1.0.5 2015-01-03
+
+* Fixed a bug in the Universal Studios code
+
+=== 1.0.4 2014-12-27
+
+* Added Universal Studios Orlando
+* Added Universal Studios Islands of Adventure
+
+=== 1.0.3 2014-01-22
+
+* New Walt Disney World code to provide better queue times
+
 === 1.0.2 2012-08-21
 
 * Seaworld parks now work correctly on 1.9.2
