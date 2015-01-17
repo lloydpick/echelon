@@ -80,15 +80,30 @@ module Echelon
 
       private
 
+      def ride_status(time)
+        case time
+          when -1 then 'Out of operating hours'
+          when -2 then 'Closed temporarily'
+          when -3 then 'Closed long term'
+          when -4 then 'Closed for inclement weather'
+          when -5 then 'Closed for capacity'
+          when -50 then 'Not available'
+          else ''
+        end
+      end
+
       def create_ride_object(ref)
         ride = json_data['Rides'].find { |k, _v| k['Id'].to_i == ref }
+        active = ride['WaitTime'].to_i >= 0 ? 1 : 0
 
         meta = {
           express_pass_accepted: ride['ExpressPassAccepted'],
-          single_rider: ride['HasSingleRiderLine']
-        }
+          single_rider: ride['HasSingleRiderLine'],
+          unavailable_reason: ride_status(ride['WaitTime'].to_i)
+        }.delete_if { |key, value| value.is_a?(String) && value.empty? }
 
-        Ride.new(name: ride['MblDisplayName'], queue_time: ride['WaitTime'], meta: meta)
+        wait_time = ride['WaitTime'].to_i < 0 ? 0 : ride['WaitTime'].to_i
+        Ride.new(name: ride['MblDisplayName'], queue_time: wait_time, active: active, meta: meta)
       end
 
     end
