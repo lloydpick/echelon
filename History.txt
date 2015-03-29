@@ -1,3 +1,9 @@
+=== 1.1.0 2015-03-29
+
+* Breaking change in the Walt Disney World data as 'actual' is no longer reported by their API, removed reference
+* Fixed issue with Universal Orlando server rejecting all our auth requests once DST begins
+* Added missing ride 'Ratatouille' to Disneyland Paris
+
 === 1.0.6 2015-01-17
 
 * Added active flag for UO/IoA
