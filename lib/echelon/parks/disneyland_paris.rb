@@ -46,7 +46,8 @@ module Echelon
         'P2XA08' => 'Slinky Dog Zigzag Spin',
         'P2ZA00' => 'Armageddon : les Effets Spéciaux',
         'P2ZA01' => 'Rock\'n\'Roller Coaster starring Aerosmith',
-        'P2ZA02' => 'The Twilight Zone Tower of Terror'
+        'P2ZA02' => 'The Twilight Zone Tower of Terror',
+        'P2XA09' => 'Ratatouille : L\'Aventure Totalement Toquée de Rémy'
       }
     end
 
