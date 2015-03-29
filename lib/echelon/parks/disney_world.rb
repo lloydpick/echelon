@@ -72,17 +72,14 @@ module Echelon
             status = 0 if ride_status == 'Closed'
             status = -1 if ride_status == 'Down'
 
-            queue_times = {
-              actual: ride['waitTime']['actualWaitMinutes'].to_i,
-              posted: ride['waitTime']['postedWaitMinutes'].to_i
-            }
+            queue_time = ride['waitTime']['postedWaitMinutes'].to_i
 
             meta = {
               fastpass_available: ride['waitTime']['fastPass']['available'],
               single_rider: ride['waitTime']['singleRider']
             }
 
-            return Ride.new(name: ride_list[ref], queue_time: queue_times, active: status, meta: meta)
+            return Ride.new(name: ride_list[ref], queue_time: queue_time, active: status, meta: meta)
           end
         end
       end
