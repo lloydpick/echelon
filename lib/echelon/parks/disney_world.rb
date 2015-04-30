@@ -38,6 +38,14 @@ module Echelon
       @epcot ||= DisneyWorld::Epcot.new(access_token)
     end
 
+    def disneyland
+      @disneyland ||= DisneyWorld::Disneyland.new(access_token)
+    end
+
+    def california_adventure
+      @california_adventure ||= DisneyWorld::CaliforniaAdventure.new(access_token)
+    end
+
     class Park < Echelon::Park
       attr_reader :json_data
 
@@ -107,6 +115,18 @@ module Echelon
     class AnimalKingdom < Park
       def initialize(access_token)
         super(access_token, 80_007_823)
+      end
+    end
+
+    class Disneyland < Park
+      def initialize(access_token)
+        super(access_token, 330339)
+      end
+    end
+
+    class CaliforniaAdventure < Park
+      def initialize(access_token)
+        super(access_token, 336894)
       end
     end
   end
