@@ -14,7 +14,7 @@ module Echelon
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-      params = Echelon::parameterize(grant_type: 'assertion', assertion_type: 'public', client_id: 'WDPRO-MOBILE.CLIENT-PROD')
+      params = Echelon::parameterize(grant_type: 'assertion', assertion_type: 'public', client_id: 'WDPRO-MOBILE.MDX.WDW.ANDROID-PROD')
       resp = http.post(uri.request_uri, params)
 
       data = JSON.parse(resp.body)
@@ -53,8 +53,7 @@ module Echelon
 
         headers = {
           'Authorization' => "BEARER #{access_token}",
-          'Accept' => 'application/json;apiversion=1',
-          'X-Conversation-Id' => '~WDPRO-MOBILE.CLIENT-PROD'
+          'Accept' => 'application/json'
         }
 
         resp = http.get(uri.request_uri, headers)
