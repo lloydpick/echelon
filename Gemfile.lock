@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    echelon (1.1.0)
+    echelon (1.1.1)
       json_pure (= 1.8.1)
       nokogiri (~> 1.5)
       zip (= 2.0.2)
@@ -33,3 +33,6 @@ DEPENDENCIES
   echelon!
   rake
   rspec (~> 2.4)
+
+BUNDLED WITH
+   1.12.0

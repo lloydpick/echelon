@@ -1,3 +1,7 @@
+=== 1.1.1 2016-04-29
+
+* Fixed the Walt Disney World oauth
+
 === 1.1.0 2015-03-29
 
 * Breaking change in the Walt Disney World data as 'actual' is no longer reported by their API, removed reference
