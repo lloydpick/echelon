@@ -42,7 +42,8 @@ module Echelon
       }.merge(SHARED_HEADERS)
 
       resp = http.post(uri.path, params, headers)
-      data = JSON.parse(resp.body)
+      gzip = Zlib::GzipReader.new(StringIO.new(resp.body))
+      data = JSON.parse(gzip.read)
       @access_token = data['Token']
       @expires_at = DateTime.parse(data['TokenExpirationString']).to_time
     end
@@ -76,7 +77,9 @@ module Echelon
         }.merge(SHARED_HEADERS)
 
         resp = http.get(uri.request_uri, headers)
-        @json_data = JSON.parse(resp.body)
+        gzip = Zlib::GzipReader.new(StringIO.new(resp.body))
+        @json_data = JSON.parse(gzip.read)
+        @json_data
       end
 
       private
